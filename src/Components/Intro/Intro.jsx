@@ -55,6 +55,13 @@ I'm excited to put my knowledge in use and continue to develop my abilities in a
             <div style={{top: '18rem', left: '0rem'}}>
                 <FloatingDiv image={thumbup} txt1='Best Design' txt2='Award'/>
             </div>
+
+            {/* blur parts */}
+            <div className="blur" style={{background: 'rgb(238 210 255)'}}>
+            </div>
+
+            <div className="blur" style={{background: 'C1F5FF', top: '17rem', width: '21rem', height:'11rem', left:'-9rem'}}></div>
+
         </div>
     </div>  )
 }
