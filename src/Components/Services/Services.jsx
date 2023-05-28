@@ -4,6 +4,7 @@ import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Card from '../Card/Card';
+import Resume from './Harrison Software development Resume.pdf'
 
 function Services() {
     return (
@@ -15,7 +16,10 @@ function Services() {
                     <br />
                     autem blanditiis amet, quis id numquam. Voluptas veritatis quos at quibusdam</span>
 
+                    <a href={Resume} download>
                     <button className="button s-button">Download CV</button>
+                    </a>
+                    
                     <div className="blur s-blur" style={{background: 'ABF1FF94'}}></div>
             </div>
 
