@@ -36,6 +36,8 @@ function Services() {
                     <Card emoji={Humble} heading={'UI/UX'} detail={'Html, CSS, Javascript, React'}/>
                 </div>
 
+                <div className="blur s-blur2" style={{background:'var(--purple)'}}></div>
+
             </div>
         </div>
     )
