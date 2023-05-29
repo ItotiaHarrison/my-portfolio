@@ -5,11 +5,13 @@
     gap: 5rem;
     height: 30vh;
     margin-bottom: 8rem;
+    color: var(--black);
 }
 
 .achievement{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .circle{

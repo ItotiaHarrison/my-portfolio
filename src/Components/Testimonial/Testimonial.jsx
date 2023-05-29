@@ -33,7 +33,7 @@ function Testimonial() {
         },
       ];
   return (
-    <div className="t-wrapper">
+    <div className="t-wrapper" id='testimonial'>
         <div className="t-heading">
             <span>Clients always get </span>
             <span>Exceptional Work </span>
@@ -46,6 +46,7 @@ function Testimonial() {
         <Swiper modules={[Pagination]}
         slidesPerView={1}
         pagination={{ clickable: true }}>
+          
         {clients.map((client, index) => {
           return (
             <SwiperSlide key={index}>

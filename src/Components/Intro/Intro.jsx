@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Intro.css'
 import Github from '../../img/github.png';
 import LinkedIn from '../../img/linkedin.png';
@@ -10,14 +10,20 @@ import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
 import FloatingDiv from '../FloatingDiv/FloatingDiv';
+import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 
 function Intro() {
+    const transition = { duration: 2, type: "spring" };
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
   return (
-    <div className="intro">
+    <div className="Intro" id='Intro'>
         <div className="i-left">
             <div className="i-name">
-                <span>
+                <span style={{ color: darkMode ? "white" : "" }}>
                     Hi I'm
                 </span>
                 <span>Harrison Itotia</span>
@@ -28,7 +34,10 @@ I'm excited to put my knowledge in use and continue to develop my abilities in a
                 </span>
             </div>
 
+            <Link to="contact" smooth={true} spy={true}>
             <button className="button i-button">Hire me</button>
+            </Link>
+            
             <div className="i-icons">
                 <a href="https://github.com/ItotiaHarrison">
                 <img src={Github} alt="" />
@@ -46,15 +55,32 @@ I'm excited to put my knowledge in use and continue to develop my abilities in a
             <img src={Vector1} alt="" />
             <img src={Vector2} alt="" />
             <img src={boy} alt="" />
-            <img src={glassesimoji} alt="" />
+            <motion.img
+          initial={{ left: "-36%" }}
+          whileInView={{ left: "-24%" }}
+          transition={transition}
+          src={glassesimoji}
+          alt=""
+        />
             
-            <div style={{top: '-4%', left: '68%'}}>
-                <FloatingDiv image={crown} txt1='Web' txt2='Developer'/>
-            </div>
+            <motion.div
+          initial={{ top: "-4%", left: "74%" }}
+          whileInView={{ left: "68%" }}
+          transition={transition}
+          className="floating-div"
+        >
+          <FloatingDiv img={crown} text1="Web" text2="Developer" />
+        </motion.div>
 
-            <div style={{top: '18rem', left: '0rem'}}>
-                <FloatingDiv image={thumbup} txt1='Best Design' txt2='Award'/>
-            </div>
+        <motion.div
+          initial={{ left: "9rem", top: "18rem" }}
+          whileInView={{ left: "0rem" }}
+          transition={transition}
+          className="floating-div"
+        >
+          {/* floatinDiv mein change hy dark mode ka */}
+          <FloatingDiv img={thumbup} text1="Best Design" text2="Award" />
+        </motion.div>
 
             {/* blur parts */}
             <div className="blur" style={{background: 'rgb(238 210 255)'}}>

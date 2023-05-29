@@ -3,7 +3,7 @@ import './Footer.css'
 import Wave from "../../img/wave.png";
 import Twitter from "@iconscout/react-unicons/icons/uil-twitter";
 import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin";
-import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import Github from "@iconscout/react-unicons/icons/uil-github";
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="f-icons">
           <Twitter color="white" size={"3rem"} />
           <Linkedin color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} />
+          <Github color="white" size={"3rem"} />
         </div>
       </div>
     </div>
